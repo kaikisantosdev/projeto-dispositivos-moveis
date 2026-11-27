@@ -41,12 +41,12 @@ class _RegisterPageState extends State<RegisterPage> {
         password: password,
       );
 
-      Navigator.pop(context); // volta para login
+      Navigator.pop(context); 
       ScaffoldMessenger.of(
         context,
-      ).showSnackBar(SnackBar(content: Text("Conta criada com sucesso!")));
+      ).showSnackBar(SnackBar(content: Text("Conta criada com exito!")));
     } on FirebaseAuthException catch (e) {
-      showError(e.message ?? "Erro ao cadastrar");
+      showError(e.message ?? "Erro ao cadastrar!");
     } finally {
       setState(() => isLoading = false);
     }
