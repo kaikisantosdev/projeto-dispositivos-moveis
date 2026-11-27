@@ -28,7 +28,6 @@ class _LoginPageState extends State<LoginPage> {
       setState(() => isLoading = true);
 
       await auth.signInWithEmailAndPassword(email: email, password: password);
-
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => CalendarPage()),
